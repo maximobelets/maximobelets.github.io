@@ -1,9 +1,11 @@
 .root {
-    background-color: aquamarine;
+    background-color: #F7F3F5;
     min-height: 560px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .title {
-    text-align: center;
     margin: 0;
 }

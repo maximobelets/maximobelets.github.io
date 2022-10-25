@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import s from './About.module.scss';
+
 export const About = () => {
     interface GitHubData {
         avatar_url: string;
@@ -22,7 +24,7 @@ export const About = () => {
             .then(response => setData({
                 avatar_url: response.avatar_url,
                 followers: response.followers,
-                url: response.url,
+                url: response.html_url,
                 login: response.login,
                 repos: response.public_repos,
         }))
@@ -31,11 +33,12 @@ export const About = () => {
 
     console.log(data)
     return (
-        <div>
+        <div className={s.root}>
             About
             <h2>
-                Find Me On GitHub
+                Find Me On <a href={data.url}>GitHub</a>
             </h2>
+            <img src={data.avatar_url} alt="avatar"  className={s.avatar} />
             <ul>
                 <li>Name: {data.login}</li>
                 <li>Public Repos: {data.repos}</li>

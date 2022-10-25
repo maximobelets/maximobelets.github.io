@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/maximobelets.github.io/static/css/main.ac68fde3.css",
+    "main.js": "/maximobelets.github.io/static/js/main.0b92eced.js",
+    "index.html": "/maximobelets.github.io/index.html",
+    "main.ac68fde3.css.map": "/maximobelets.github.io/static/css/main.ac68fde3.css.map",
+    "main.0b92eced.js.map": "/maximobelets.github.io/static/js/main.0b92eced.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ac68fde3.css",
+    "static/js/main.0b92eced.js"
+  ]
+}

@@ -31,8 +31,6 @@ export const About = () => {
             .catch(error => console.log(error))
     }, [])
 
-    console.log(data)
-
     if (!data.repos) return null;
 
     return (

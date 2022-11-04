@@ -32,6 +32,9 @@ export const About = () => {
     }, [])
 
     console.log(data)
+
+    if (!data.repos) return null;
+
     return (
         <div className={s.root}>
             About

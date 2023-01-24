@@ -35,15 +35,17 @@ export const About = () => {
 
     return (
         <div className={s.root}>
-            About
-            <h2>
+            <span className={s.about}>
+                About
+            </span>
+            <h2 className={s.title}>
                 Find Me On <a href={data.url}>GitHub</a>
             </h2>
             <img src={data.avatar_url} alt="avatar"  className={s.avatar} />
-            <ul>
-                <li>Name: {data.login}</li>
-                <li>Public Repos: {data.repos}</li>
-                <li>Followers: {data.followers}</li>
+            <ul className={s.list}>
+                <li className={s.listItem}>Name: {data.login}</li>
+                <li className={s.listItem}>Public Repos: {data.repos}</li>
+                <li className={s.listItem}>Followers: {data.followers}</li>
             </ul>
         </div>
     )

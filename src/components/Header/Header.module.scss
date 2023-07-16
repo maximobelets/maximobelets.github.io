@@ -2,11 +2,13 @@
     background-color: #F7F3F5;
     min-height: 560px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
 }
 
 .title {
     margin: 0;
+    margin-bottom: 160px;
     font-size: 50px;
 }

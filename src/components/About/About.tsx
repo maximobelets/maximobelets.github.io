@@ -34,7 +34,7 @@ export const About = () => {
     if (!data.repos) return null;
 
     return (
-        <div className={s.root}>
+        <div className={s.root} id="about">
             <span className={s.about}>
                 About
             </span>

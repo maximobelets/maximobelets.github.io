@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter } from 'react-router-dom';
 
 import { Header } from './components/Header';
 
@@ -10,13 +11,15 @@ import { Footer } from './components/Footer/Footer';
 
 export const App = () => {
   return (
-    <div className={s.root}>
-      <Header />
-      <main>
-        {/* <Projects /> */}
-        <About />
-      </main>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className={s.root}>
+        <Header />
+        <main>
+          {/* <Projects /> */}
+          <About />
+        </main>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }

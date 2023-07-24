@@ -6,8 +6,9 @@ import { Header } from './components/Header';
 
 import s from './App.module.scss';
 import { Projects } from './components/Projects';
-import { About } from './components/About';
+import { GitHub } from './components/GitHub';
 import { Footer } from './components/Footer/Footer';
+import { About } from './components/About';
 
 export const App = () => {
   return (
@@ -15,8 +16,9 @@ export const App = () => {
       <div className={s.root}>
         <Header />
         <main>
-          {/* <Projects /> */}
           <About />
+          {/* <Projects /> */}
+          <GitHub />
         </main>
         <Footer />
       </div>

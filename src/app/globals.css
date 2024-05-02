@@ -31,3 +31,7 @@ body {
     text-wrap: balance;
   }
 }
+
+main {
+  margin: 44px 80px;
+}

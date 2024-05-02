@@ -4,7 +4,7 @@ import Photo from './assets/photo.png';
 
 export const Header = () => {
     return (
-        <header className="mt-[240px] flex justify-between mx-[160px]">
+        <header className="mt-[224px] flex justify-between mx-[160px]">
             <div>
                 <h2 className="text-[64px] font-bold">
                     Hi there 👋

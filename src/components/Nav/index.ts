@@ -1,1 +1,1 @@
-import { Nav } from './Nav';
+export { Nav } from './Nav';

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+
 import gitHubIcon from './assets/github-icon.svg';
 import instIcon from './assets/inst-icon.svg';
 import telegramIcon from './assets/telegram-icon.svg';
@@ -7,7 +8,7 @@ export const Footer = (): React.ReactNode => {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="flex justify-between">
+        <footer className="flex justify-between mt-[200px] items-start">
             <div className="w-[130px] flex justify-between">
                 <Image
                     src={gitHubIcon}

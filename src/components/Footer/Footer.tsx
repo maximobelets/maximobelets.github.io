@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 import gitHubIcon from './assets/github-icon.svg';
 import instIcon from './assets/inst-icon.svg';
 import telegramIcon from './assets/telegram-icon.svg';
@@ -10,19 +8,19 @@ export const Footer = (): React.ReactNode => {
     return (
         <footer className="flex justify-between mt-[200px] items-start">
             <div className="w-[130px] flex justify-between">
-                <Image
+                <img
                     src={gitHubIcon}
                     width={30}
                     height={30}
                     alt="My GitHub"
                 />
-                <Image
+                <img
                     src={instIcon}
                     width={30}
                     height={30}
                     alt="My Insta"
                 />
-                <Image
+                <img
                     src={telegramIcon}
                     width={30}
                     height={30}

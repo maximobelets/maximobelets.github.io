@@ -1,27 +1,27 @@
-import Link from "next/link"
+import { NavLink } from "react-router-dom";
 
 export const Nav = (): React.ReactNode => {
     return (
         <nav className="flex justify-between">
-            <Link href="/" className="mr-6 left-0 ">
+            <NavLink to="/" className="mr-6 left-0">
                 MaximObelets
-            </Link>
+            </NavLink>
             <ul>
-                <Link href="/" className="mr-6">
+                <NavLink to="/" className="mr-6">
                     Main
-                </Link>
-                <Link href="/" className="mr-6">
+                </NavLink>
+                <NavLink to="/" className="mr-6">
                     About
-                </Link>
-                <Link href="/" className="mr-6">
+                </NavLink>
+                <NavLink to="/github" className="mr-6">
                     GitHub
-                </Link>
-                <Link href="/" className="mr-6">
+                </NavLink>
+                <NavLink to="/" className="mr-6">
                     Projects
-                </Link>
-                <Link href="/" className="mr-6">
+                </NavLink>
+                <NavLink to="/" className="mr-6">
                     Contacts
-                </Link>
+                </NavLink>
             </ul>
             <div>
                 En / Ru

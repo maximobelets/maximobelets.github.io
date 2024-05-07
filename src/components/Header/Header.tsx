@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import Photo from './assets/photo.png';
 
 export const Header = () => {
@@ -14,7 +12,7 @@ export const Header = () => {
                     I'm a web developer
                 </p>
             </div>
-            <Image 
+            <img 
                 src={Photo}
                 width={300}
                 height={300}

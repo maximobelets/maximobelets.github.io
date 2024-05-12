@@ -6,7 +6,7 @@ export const Footer = (): React.ReactNode => {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="flex justify-between mt-[200px] items-start">
+        <footer className="flex justify-between items-start">
             <div className="w-[130px] flex justify-between">
                 <img
                     src={gitHubIcon}

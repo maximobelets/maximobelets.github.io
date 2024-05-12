@@ -32,19 +32,18 @@ export const GitHub = () => {
     if (!data.repos) return null;
 
     return (
-        <div id="github">
-            <span>
-                About
-            </span>
-            <h2>
-                Find Me On <a href={data.url}>GitHub</a>
-            </h2>
+        <div className="flex justify-between mx-[160px]">
+            <div>
+                <h2>
+                    Find Me On <a href={data.url}>GitHub</a>
+                </h2>
+                <ul>
+                    <li>Name: {data.login}</li>
+                    <li>Public Repos: {data.repos}</li>
+                    <li>Followers: {data.followers}</li>
+                </ul>
+            </div>
             <img src={data.avatar_url} alt="avatar"/>
-            <ul>
-                <li>Name: {data.login}</li>
-                <li>Public Repos: {data.repos}</li>
-                <li>Followers: {data.followers}</li>
-            </ul>
         </div>
     )
 }

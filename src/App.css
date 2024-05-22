@@ -5,10 +5,10 @@
 
 /* Css values for root layout */
 
-/* #root {
+.root {
     height: 100dvh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 44px 80px;
-} */
+}

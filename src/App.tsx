@@ -11,7 +11,7 @@ function App() {
   return (
     <BrowserRouter>
 
-      <div className='flex flex-col justify-between h-dvh px-[44px] py-[80px]'>
+      <div className='root'>
 
         <Nav />
 

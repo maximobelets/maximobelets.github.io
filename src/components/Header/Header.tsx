@@ -1,13 +1,15 @@
 import Photo from './assets/photo.png';
 
+import s from './Header.module.css';
+
 export const Header = () => {
     return (
-        <header className=" flex justify-between mx-[160px]">
-            <div>
-                <h2 className="text-[64px] font-bold">
+        <header className={s.root}>
+            <div className={s.content}>
+                <h2 className={s.title}>
                     Hi there 👋
                 </h2>
-                <p className="text-5xl font-normal mt-[20px]">
+                <p className={s.description}>
                     My name is Maxim Obelets<br />
                     I'm a web developer
                 </p>

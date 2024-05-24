@@ -1,0 +1,12 @@
+.root {
+    display: flex;
+    justify-content: space-between;
+}
+
+.link {
+    margin-right: 40px;
+}
+
+.list {
+    margin: 0;
+}

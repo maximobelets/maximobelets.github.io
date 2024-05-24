@@ -1,0 +1,24 @@
+.root {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 160px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 64px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.description {
+    font-size: 48px;
+    margin-top: 20px;
+    font-weight: 400;
+    margin: 0;
+}

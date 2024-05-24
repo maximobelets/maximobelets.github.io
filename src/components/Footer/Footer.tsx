@@ -2,12 +2,14 @@ import gitHubIcon from './assets/github-icon.svg';
 import instIcon from './assets/inst-icon.svg';
 import telegramIcon from './assets/telegram-icon.svg';
 
+import s from './Footer.module.css';
+
 export const Footer = (): React.ReactNode => {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="flex justify-between items-start">
-            <div className="w-[130px] flex justify-between">
+        <footer className={s.root}>
+            <div className={s.links}>
                 <img
                     src={gitHubIcon}
                     width={30}
@@ -27,7 +29,7 @@ export const Footer = (): React.ReactNode => {
                     alt="My Telegram"
                 />
             </div>
-            <p>
+            <p className={s.date}>
                 {currentYear}
             </p>
         </footer>

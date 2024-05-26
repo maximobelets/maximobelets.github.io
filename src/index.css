@@ -4,6 +4,11 @@ body {
     height: 100dvh;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 #root {
     height: 100%;
     max-height: -webkit-fill-available;

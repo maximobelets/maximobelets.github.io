@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import s from './GitHub.module.css';
+
 export const GitHub = () => {
     interface GitHubData {
         avatar_url: string;
@@ -32,18 +34,18 @@ export const GitHub = () => {
     if (!data.repos) return null;
 
     return (
-        <div className="flex justify-between mx-[160px]">
-            <div>
-                <h2>
+        <div className={s.root}>
+            <div className={s.content}>
+                <h2 className={s.title}>
                     Find Me On <a href={data.url}>GitHub</a>
                 </h2>
-                <ul>
-                    <li>Name: {data.login}</li>
-                    <li>Public Repos: {data.repos}</li>
-                    <li>Followers: {data.followers}</li>
+                <ul className={s.list}>
+                    <li className={s.item}>Name: {data.login}</li>
+                    <li className={s.item}>Public Repos: {data.repos}</li>
+                    <li className={s.item}>Followers: {data.followers}</li>
                 </ul>
             </div>
-            <img src={data.avatar_url} alt="avatar"/>
+            <img src={data.avatar_url} alt="avatar" className={s.image} />
         </div>
     )
 }

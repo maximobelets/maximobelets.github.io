@@ -14,10 +14,9 @@ export const Header = () => {
                     I'm a web developer
                 </p>
             </div>
-            <img 
+            <img
+                className={s.image}
                 src={Photo}
-                width={300}
-                height={300}
                 alt="Picture of the author"
             />
         </header>

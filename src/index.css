@@ -1,7 +1,9 @@
 @import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
     height: 100dvh;
+    font-family: "Montserrat", sans-serif;
 }
 
 a {
@@ -16,4 +18,8 @@ a {
     flex-direction: column;
     justify-content: space-between;
     padding: 44px 80px;
+
+    @media (max-width: 768px) {
+        padding: 20px;
+    }
 }

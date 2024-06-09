@@ -11,7 +11,30 @@ import s from './Nav.module.css';
 export const Nav = (): React.ReactNode => {
     const [mobileMenu, setMobileMenu] = useState(true);
 
-	const handleMobileMenu = () => setMobileMenu(!mobileMenu);
+	const handleMobileMenu = (): void => setMobileMenu(!mobileMenu);
+
+    const navConfig = [
+        {
+            path: '/',
+            title: 'Main'
+        },
+        {
+            path: '/github',
+            title: 'GitHub'
+        },
+        // {
+        //     path: '/',
+        //     title: 'About'
+        // },
+        // {
+        //     path: '/',
+        //     title: 'Projects'
+        // },
+        // {
+        //     path: '/',
+        //     title: 'Contacts'
+        // },
+    ]
 
     return (
         <nav className={cn(s.root, !mobileMenu && s.mobileNav  )}>
@@ -19,21 +42,16 @@ export const Nav = (): React.ReactNode => {
                 MaximObelets
             </NavLink>
             <ul className={cn(s.list, !mobileMenu && s.listMobile)}>
-                <NavLink to="/" className={s.link}>
-                    Main
-                </NavLink>
-                <NavLink to="/" className={s.link}>
-                    About
-                </NavLink>
-                <NavLink to="/github" className={s.link}>
-                    GitHub
-                </NavLink>
-                <NavLink to="/" className={s.link}>
-                    Projects
-                </NavLink>
-                <NavLink to="/" className={s.link}>
-                    Contacts
-                </NavLink>
+                {navConfig.map((navLink) => (
+                    <NavLink
+                        to={navLink.path}
+                        className={s.link}
+                        key={navLink.title}
+                        onClick={handleMobileMenu}
+                    >
+                        {navLink.title}
+                    </NavLink>
+                ))}
             </ul>
             <img
 				src={mobileMenu ? menuIcon : crossIcon}

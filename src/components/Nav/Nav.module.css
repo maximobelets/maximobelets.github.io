@@ -42,7 +42,7 @@
 
 .mobileNav {
 	@media (max-width: 1024px) {
-		background-color: #85DEFF;
+		background-color: #FFF;
 		position: fixed;
 		min-width: 100%;
 		height: 100%;

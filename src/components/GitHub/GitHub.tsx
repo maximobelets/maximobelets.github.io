@@ -37,7 +37,10 @@ export const GitHub = () => {
         <div className={s.root}>
             <div className={s.content}>
                 <h2 className={s.title}>
-                    Find Me On <a href={data.url}>GitHub</a>
+                    Find Me On{' '}
+                    <a href={data.url} className={s.link} target='blank'>
+                        GitHub
+                    </a>
                 </h2>
                 <ul className={s.list}>
                     <li className={s.item}>Name: {data.login}</li>

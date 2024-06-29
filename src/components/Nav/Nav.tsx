@@ -1,7 +1,8 @@
 import { useState } from "react";
 import cn from "classnames";
-
 import { NavLink } from "react-router-dom";
+
+import { LANGUAGES } from "../../constants";
 
 import menuIcon from './assets/menu.svg';
 import crossIcon from './assets/cross.svg';
@@ -59,9 +60,13 @@ export const Nav = (): React.ReactNode => {
 				className={s.mobileMenu}
 				onClick={handleMobileMenu}
 			/>
-            <div className={s.lang}>
-                En / Ru
-            </div>
+            <select className={s.lang} defaultValue="En">
+                {LANGUAGES.map((language) => (
+                    <option>
+                        {language.language}
+                    </option>
+                ))}
+            </select>
         </nav>
     )
 }

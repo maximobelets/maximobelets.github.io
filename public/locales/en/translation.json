@@ -4,5 +4,13 @@
         "descriptionFirst": "My name is Maxim Obelets",
         "descriptionSecond": "I'm a web developer",
         "altForPhoto": "Picture of the author"
+    },
+    "github": {
+        "title": "Find Me On",
+        "github": "GitHub",
+        "name": "Name",
+        "publicRepos": "Public Repos",
+        "followers": "Followers",
+        "altForPhoto": "Avatar"
     }
 }

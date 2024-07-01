@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import s from './GitHub.module.css';
 
@@ -19,6 +20,8 @@ export const GitHub = () => {
         repos: 0,
     });
 
+    const { t } = useTranslation();
+
     React.useEffect(() => {
         fetch('https://api.github.com/users/maximobelets').then(response => response.json())
             .then(response => setData({
@@ -37,18 +40,18 @@ export const GitHub = () => {
         <div className={s.root}>
             <div className={s.content}>
                 <h2 className={s.title}>
-                    Find Me On{' '}
+                    {t("github.title")}{' '}
                     <a href={data.url} className={s.link} target='blank'>
-                        GitHub
+                        {t("github.github")}
                     </a>
                 </h2>
                 <ul className={s.list}>
-                    <li className={s.item}>Name: {data.login}</li>
-                    <li className={s.item}>Public Repos: {data.repos}</li>
-                    <li className={s.item}>Followers: {data.followers}</li>
+                    <li className={s.item}>{t("github.name")}: {data.login}</li>
+                    <li className={s.item}>{t("github.publicRepos")}: {data.repos}</li>
+                    <li className={s.item}>{t("github.followers")}: {data.followers}</li>
                 </ul>
             </div>
-            <img src={data.avatar_url} alt="avatar" className={s.image} />
+            <img src={data.avatar_url} alt={t("github.altForPhoto")} className={s.image} />
         </div>
     )
 }

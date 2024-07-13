@@ -1,6 +1,7 @@
 import { useState } from "react";
 import cn from "classnames";
 import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import { LANGUAGES } from "../../constants";
 
@@ -13,6 +14,12 @@ export const Nav = (): React.ReactNode => {
     const [mobileMenu, setMobileMenu] = useState(true);
 
 	const handleMobileMenu = (): void => setMobileMenu(!mobileMenu);
+
+    const { i18n } = useTranslation();
+
+    const handleLanguage = (lang: any) => {
+        i18n.changeLanguage(lang)
+    }
 
     const navConfig = [
         {
@@ -60,13 +67,13 @@ export const Nav = (): React.ReactNode => {
 				className={s.mobileMenu}
 				onClick={handleMobileMenu}
 			/>
-            <select className={s.lang} defaultValue="En">
+            {/* <select className={s.lang} defaultValue="En"> */}
                 {LANGUAGES.map((language) => (
-                    <option>
+                    <div onClick={() => handleLanguage(language.code)}>
                         {language.language}
-                    </option>
+                    </div>
                 ))}
-            </select>
+            {/* </select> */}
         </nav>
     )
 }

@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import { LANGUAGES } from "../../constants";
+import { navConfig } from "../../utils/config";
 
 import menuIcon from './assets/menu.svg';
 import crossIcon from './assets/cross.svg';
@@ -17,32 +18,9 @@ export const Nav = (): React.ReactNode => {
 
     const { i18n } = useTranslation();
 
-    const handleLanguage = (lang: any) => {
+    const handleLanguage = (lang: string): void => {
         i18n.changeLanguage(lang)
     }
-
-    const navConfig = [
-        {
-            path: '/',
-            title: 'Main'
-        },
-        {
-            path: '/github',
-            title: 'GitHub'
-        },
-        // {
-        //     path: '/',
-        //     title: 'About'
-        // },
-        // {
-        //     path: '/',
-        //     title: 'Projects'
-        // },
-        // {
-        //     path: '/',
-        //     title: 'Contacts'
-        // },
-    ]
 
     return (
         <nav className={cn(s.root, !mobileMenu && s.mobileNav  )}>

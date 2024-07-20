@@ -12,15 +12,28 @@ import crossIcon from './assets/cross.svg';
 import s from './Nav.module.css';
 
 export const Nav = (): React.ReactNode => {
+    const [isOpen, setIsOpen] = useState(false);
+	const [activeValue, setActiveValue] = useState('');
     const [mobileMenu, setMobileMenu] = useState(true);
+
+    const handleSelect = () => {
+		setIsOpen(prevState => !prevState)
+	}
+
+	const changeValue = (data: any) => {
+        console.log(data, 'data')
+		setActiveValue(data)
+        i18n.changeLanguage(data)
+		setIsOpen(prevState => !prevState)
+	}
 
 	const handleMobileMenu = (): void => setMobileMenu(!mobileMenu);
 
     const { i18n } = useTranslation();
 
-    const handleLanguage = (lang: string): void => {
-        i18n.changeLanguage(lang)
-    }
+    // const handleLanguage = (lang: string): void => {
+    //     i18n.changeLanguage(lang)
+    // }
 
     return (
         <nav className={cn(s.root, !mobileMenu && s.mobileNav  )}>
@@ -45,13 +58,21 @@ export const Nav = (): React.ReactNode => {
 				className={s.mobileMenu}
 				onClick={handleMobileMenu}
 			/>
-            {/* <select className={s.lang} defaultValue="En"> */}
-                {LANGUAGES.map((language) => (
-                    <div onClick={() => handleLanguage(language.code)}>
-                        {language.language}
-                    </div>
-                ))}
-            {/* </select> */}
+            <div>
+				<input
+					value={activeValue}
+					onClick={handleSelect}
+				/>
+				{isOpen && (
+					<ul>
+						{LANGUAGES?.map((item) =>
+							<li onClick={() => changeValue(item.code)}>
+								{item.language}
+							</li>
+						)}
+					</ul>
+				)}
+			</div>
         </nav>
     )
 }

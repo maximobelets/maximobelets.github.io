@@ -54,6 +54,10 @@
 	}
 }
 
+.input {
+	width: 20px;
+}
+
 .lang {
     @media (max-width: 1024px) {
 		display: none;

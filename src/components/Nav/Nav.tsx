@@ -10,7 +10,6 @@ import menuIcon from './assets/menu.svg';
 import crossIcon from './assets/cross.svg';
 
 import s from './Nav.module.css';
-import classNames from "classnames";
 
 export const Nav = (): React.ReactNode => {
     const { i18n } = useTranslation();

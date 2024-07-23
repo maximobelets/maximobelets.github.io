@@ -10,6 +10,7 @@ import menuIcon from './assets/menu.svg';
 import crossIcon from './assets/cross.svg';
 
 import s from './Nav.module.css';
+import classNames from "classnames";
 
 export const Nav = (): React.ReactNode => {
     const { i18n } = useTranslation();
@@ -60,9 +61,12 @@ export const Nav = (): React.ReactNode => {
                     className={s.input}
 				/>
 				{isOpen && (
-					<ul>
+					<ul className={s.langList}>
 						{LANGUAGES?.map((item) =>
-							<li onClick={() => changeValue(item.code)}>
+							<li
+                                onClick={() => changeValue(item.code)}
+                                className={s.lang}
+                            >
 								{item.language}
 							</li>
 						)}

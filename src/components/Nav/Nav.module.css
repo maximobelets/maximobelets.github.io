@@ -56,11 +56,21 @@
 
 .input {
 	width: 20px;
+	position: relative;
+	display: block;
 }
 
 .lang {
+	margin: 4px 0;
+
     @media (max-width: 1024px) {
 		display: none;
 	}
+}
+
+.langList {
+	list-style: none;
+	position: absolute;
+	right: 60px;
 }
 

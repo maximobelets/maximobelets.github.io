@@ -53,7 +53,7 @@ export const Nav = (): React.ReactNode => {
 				className={s.mobileMenu}
 				onClick={handleMobileMenu}
 			/>
-            <div>
+            <div className={s.langSwitcher}>
 				<input
 					value={activeValue}
 					onClick={handleSelect}

@@ -54,6 +54,12 @@
 	}
 }
 
+.langSwitcher {
+	@media (max-width: 1024px) {
+		display: none;
+	}
+}
+
 .input {
 	width: 20px;
 	position: relative;

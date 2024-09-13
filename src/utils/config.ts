@@ -11,10 +11,10 @@ export const navConfig = [
     //     path: '/',
     //     title: 'About'
     // },
-    // {
-    //     path: '/',
-    //     title: 'Projects'
-    // },
+    {
+        path: '/projects',
+        title: 'Projects'
+    },
     // {
     //     path: '/',
     //     title: 'Contacts'

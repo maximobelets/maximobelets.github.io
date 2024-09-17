@@ -65,6 +65,7 @@ export const Nav = (): React.ReactNode => {
 							<li
                                 onClick={() => changeValue(item.code)}
                                 className={s.lang}
+                                key={item.code}
                             >
 								{item.language}
 							</li>

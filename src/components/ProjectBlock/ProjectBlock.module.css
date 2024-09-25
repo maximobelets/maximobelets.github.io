@@ -1,5 +1,12 @@
 .root {
+    width: 630px;
+    height: 354px;
+    background-color: #D0D1D9;
+    border-radius: 20px;
+}
 
+.info {
+    
 }
 
 .title {

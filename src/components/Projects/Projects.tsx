@@ -6,12 +6,14 @@ export const Projects = () => {
     return (
         <section className={s.root}>
             <ProjectBlock 
-                title='First Project'
-                description='First Project'
+                title='react-headers'
+                description='React components library'
+                link='https://github.com/maximobelets/react-headers'
             />
             <ProjectBlock 
-                title='Second Project'
-                description='Second Project'
+                title='Frontend Interview'
+                description='Simple guide about Frontend interview'
+                link='https://github.com/maximobelets/Frontend-Interview'
             />
         </section>
     )

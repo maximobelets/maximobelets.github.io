@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import s from './ProjectBlock.module.css';
 
 interface ProjectBlockProps {
@@ -9,13 +10,15 @@ interface ProjectBlockProps {
 
 export const ProjectBlock = ({ title, description, link, backgorund }: ProjectBlockProps) => {
     return (
-        <div className={s.root}>
-            <h3 className={s.title}>
-                {title}
-            </h3>
-            <p className={s.description}>
-                {description}
-            </p>
-        </div>
+        <Link to={link} target='_blank' className={s.root}>
+            <div className={s.info}>
+                <h3 className={s.title}>
+                    {title}
+                </h3>
+                <p className={s.description}>
+                    {description}
+                </p>
+            </div>
+        </Link>
     )
 }

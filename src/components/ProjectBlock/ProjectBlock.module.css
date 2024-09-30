@@ -3,6 +3,12 @@
     height: 354px;
     background-color: #D0D1D9;
     border-radius: 20px;
+
+    @media (max-width: 1024px) {
+		width: 70%;
+        height: 230px;
+        margin: 20px auto;
+	}
 }
 
 .info {

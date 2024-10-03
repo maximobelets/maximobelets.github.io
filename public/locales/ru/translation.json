@@ -12,5 +12,9 @@
         "publicRepos": "Публчиные репозитории",
         "followers": "Подписчики",
         "altForPhoto": "Аватар"
+    },
+    "projects": {
+        "reactHeaders": "Библиотека React компонентов",
+        "frontendInterview": "Подсказки для Frontend интервью"
     }
 }

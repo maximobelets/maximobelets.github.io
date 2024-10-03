@@ -12,5 +12,9 @@
         "publicRepos": "Public Repos",
         "followers": "Followers",
         "altForPhoto": "Avatar"
+    },
+    "projects": {
+        "reactHeaders": "React components library",
+        "frontendInterview": "Simple guide about Frontend interview"
     }
 }

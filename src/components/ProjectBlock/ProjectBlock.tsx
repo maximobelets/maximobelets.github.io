@@ -8,7 +8,7 @@ interface ProjectBlockProps {
     backgorund?: string;
 }
 
-export const ProjectBlock = ({ title, description, link, backgorund }: ProjectBlockProps) => {
+export const ProjectBlock = ({ title, description, link = '', backgorund }: ProjectBlockProps) => {
     return (
         <Link to={link} target='_blank' className={s.root}>
             <div className={s.info}>

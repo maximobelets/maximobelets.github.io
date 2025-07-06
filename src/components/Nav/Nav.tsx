@@ -15,15 +15,15 @@ export const Nav = (): React.ReactNode => {
     const { i18n } = useTranslation();
 
     const [isOpen, setIsOpen] = useState(false);
-	const [activeValue, setActiveValue] = useState(i18n.language);
+	const [activeLanguage, setActiveLanguage] = useState(i18n.language);
     const [mobileMenu, setMobileMenu] = useState(true);
 
     const handleSelect = () => {
 		setIsOpen(prevState => !prevState)
 	}
 
-	const changeValue = (data: any) => {
-		setActiveValue(data)
+	const changeLanguage = (data: any) => {
+		setActiveLanguage(data)
         i18n.changeLanguage(data)
 		setIsOpen(prevState => !prevState)
 	}
@@ -54,16 +54,14 @@ export const Nav = (): React.ReactNode => {
 				onClick={handleMobileMenu}
 			/>
             <div className={s.langSwitcher}>
-				<input
-					value={activeValue}
-					onClick={handleSelect}
-                    className={s.input}
-				/>
+                <span onClick={handleSelect} className={s.span}>
+                    {activeLanguage}
+                </span>
 				{isOpen && (
 					<ul className={s.langList}>
 						{LANGUAGES?.map((item) =>
 							<li
-                                onClick={() => changeValue(item.code)}
+                                onClick={() => changeLanguage(item.code)}
                                 className={s.lang}
                                 key={item.code}
                             >

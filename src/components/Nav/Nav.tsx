@@ -12,10 +12,9 @@ import crossIcon from './assets/cross.svg';
 import s from './Nav.module.css';
 
 export const Nav = (): React.ReactNode => {
-    const { i18n } = useTranslation();
+    const { i18n, t } = useTranslation();
 
     const [isOpen, setIsOpen] = useState(false);
-	const [activeLanguage, setActiveLanguage] = useState(i18n.language);
     const [mobileMenu, setMobileMenu] = useState(true);
 
     const handleSelect = () => {
@@ -23,7 +22,6 @@ export const Nav = (): React.ReactNode => {
 	}
 
 	const changeLanguage = (data: any) => {
-		setActiveLanguage(data)
         i18n.changeLanguage(data)
 		setIsOpen(prevState => !prevState)
 	}
@@ -55,7 +53,7 @@ export const Nav = (): React.ReactNode => {
 			/>
             <div className={s.langSwitcher}>
                 <span onClick={handleSelect} className={s.span}>
-                    {activeLanguage}
+                    {t("main.lang")}
                 </span>
 				{isOpen && (
 					<ul className={s.langList}>

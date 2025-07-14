@@ -30,7 +30,7 @@
 	display: block;
 }
 
-.mobileMenu {
+.isMobileMenu {
 	width: 24px;
 	height: 24px;
     margin-left: auto;

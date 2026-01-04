@@ -5,7 +5,7 @@ import telegramIcon from './assets/telegram-icon.svg';
 import s from './Footer.module.css';
 
 export const Footer = (): React.ReactNode => {
-    const currentYear = new Date().getFullYear();
+    const currentYear: number = new Date().getFullYear();
 
     return (
         <footer className={s.root}>

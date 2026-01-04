@@ -21,7 +21,7 @@ export const Nav = (): React.ReactNode => {
 		setIsOpen(prevState => !prevState)
 	}
 
-	const changeLanguage = (data: any) => {
+	const changeLanguage = (data: string) => {
         i18n.changeLanguage(data)
 		setIsOpen(prevState => !prevState)
 	}

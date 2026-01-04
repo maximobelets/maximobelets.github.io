@@ -65,10 +65,12 @@
 	width: 20px;
 	position: relative;
 	display: block;
+	cursor: pointer;
 }
 
 .lang {
 	margin: 4px 0;
+	cursor: pointer;
 
     @media (max-width: 1024px) {
 		display: none;

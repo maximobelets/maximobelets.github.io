@@ -1,7 +1,15 @@
+import { MutableRefObject, useRef } from 'react';
+
 import s from './Fireworks.module.css';
 
-export const Fireworks = (): React.ReactNode => {
+export const Fireworks = () => {
+    const canvasRef: MutableRefObject<HTMLCanvasElement | null> = useRef(null);
+
     return (
-        <div>Fireworks</div>
+        <canvas
+            ref={canvasRef}
+            className={s.root}
+            onClick={(e) => console.log(e.clientX, e.clientY)}
+        />
     )
 }

@@ -10,7 +10,7 @@ export const GitHub = () => {
         url: string;
         login: string;
         repos: number;
-    };
+    }
 
     const [data, setData] = React.useState<GitHubData>({
         avatar_url: '',

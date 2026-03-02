@@ -15,6 +15,10 @@ export const navConfig = [
         path: '/projects',
         title: 'Projects'
     },
+        {
+        path: '/places',
+        title: 'Places'
+    },
     // {
     //     path: '/',
     //     title: 'Contacts'

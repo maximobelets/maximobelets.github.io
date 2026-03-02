@@ -26,7 +26,7 @@ export const Nav = (): React.ReactNode => {
 		setIsOpen(prevState => !prevState)
 	}
 
-	const handleisMobileMenu = (): void => setIsMobileMenu(prevState => !prevState);
+	const handleisMobileMenu = () => setIsMobileMenu(prevState => !prevState);
 
     return (
         <nav className={cn(s.root, isMobileMenu && s.mobileNav  )}>

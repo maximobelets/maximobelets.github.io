@@ -5,11 +5,11 @@ import s from './ProjectBlock.module.css';
 interface ProjectBlockProps {
     title?: string;
     description?: string;
-    link?: string;
-    backgorund?: string;
+    link: string;
+    background?: string;
 }
 
-export const ProjectBlock = ({ title, description, link = '' }: ProjectBlockProps) => {
+export const ProjectBlock = ({ title, description, link }: ProjectBlockProps) => {
     return (
         <Link to={link} target='_blank' className={s.root}>
             <div className={s.info}>

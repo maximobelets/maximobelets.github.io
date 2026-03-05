@@ -1,18 +1,10 @@
-import * as React from 'react';
+import { useState, useEffect } from "react";
 import { useTranslation } from 'react-i18next';
 
 import s from './GitHub.module.css';
 
 export const GitHub = () => {
-    interface GitHubData {
-        avatar_url: string;
-        followers: number;
-        url: string;
-        login: string;
-        repos: number;
-    }
-
-    const [data, setData] = React.useState<GitHubData>({
+    const [data, setData] = useState({
         avatar_url: '',
         followers: 0,
         url: '',
@@ -22,7 +14,7 @@ export const GitHub = () => {
 
     const { t } = useTranslation();
 
-    React.useEffect(() => {
+    useEffect(() => {
         fetch('https://api.github.com/users/maximobelets').then(response => response.json())
             .then(response => setData({
                 avatar_url: response.avatar_url,
